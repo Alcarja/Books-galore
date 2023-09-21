@@ -1,9 +1,9 @@
 const AboutMe = () => {
   return (
     <>
-      <div className="about-us-container">
-        <div className="about-us-card">
-          <div className="about-us-card-left">
+      <div className="about-me-container">
+        <div className="about-me-card">
+          <div className="about-me-card-left">
             <h1>About Me</h1>
             <p>My Name is Jaime Alcaraz</p>
             <p>
@@ -30,7 +30,7 @@ const AboutMe = () => {
               <img src="Images/github-logo.png" />
             </div>
           </div>
-          <div className="about-us-card-right">
+          <div className="about-me-card-right">
             <img src="Images/JaimeAlcaraz.jpeg" />
           </div>
         </div>

@@ -1,7 +1,7 @@
 const HomePage = () => {
   return (
     <>
-      <div className="home-page">
+      <div className="header">
         <img src="Images/Books-AI.png" />
         <div className="title">
           <h1 className="left">Books</h1>

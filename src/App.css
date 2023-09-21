@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap');
+
+/* CSS RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: 'Bricolage Grotesque';
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  background-color: #E9E0D8;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* ACTUAL CSS */
+
+/* Nav */
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+  padding: 1rem 4rem;
+  color: #1C1D1D; 
+  height: 10vh;
+  width: 100vw;
+  background-color: #E9E0D8;
+  z-index: 10;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav h1 {
+  font-weight: 700;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1C1D1D;
+  font-weight: 600;
+  transition: box-shadow 0.3s ease; /* Add a smooth transition effect */
+}
+
+nav a:hover {
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Customize the shadow properties */
+   border: solid 1px black;
+   background-color: black;
+   color: white;
+   padding: 0.2rem 0.4rem;
+}
+
+/* Home Page */
+
+.home-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  font-size: 12rem;
+  line-height: 0.8;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #1C1D1D;
+  -webkit-text-stroke: 2px #010100;
+
+}
+
+.right {
+  -webkit-text-stroke: 2px #010100;
+  color: #F6F6F7;
+  font-size: 12rem;
+  text-transform: uppercase;
+  line-height: 0.8;
+  font-weight: 900;
+}
+
+.home-page img {
+  height: 450px;
+  width: 450px;
+}
+
+/* Description */
+.description-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #010100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 14rem;
+  text-align: center;
+}
+
+.description-container h2 {
+  font-size: 6rem;
+  font-weight: 600;
+  padding-bottom: 3rem;
+}
+
+.description-container p {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+/* Search Books */
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 60vh;
+  margin-bottom: 4rem;
+  /* box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2); */
+  border: solid 1px white;
+}
+
+.search-bar h1 {
+  color: #1C1D1D;
+  font-size: 5rem;
+  font-weight: 900;
+  padding-bottom: 1rem;
+}
+
+.input {
+  background-color: #E9E0D8;
+  padding: 1rem 2rem;
+  border: solid 1px #1C1D1D;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1C1D1D;
+  box-shadow: none; /* You can customize this as needed */
+  transition: box-shadow 0.3s ease; /* Add a smooth transition effect */
+}
+
+.input:focus {
+  box-shadow: 5px 5px 0 0 black; /* Customize the shadow properties as needed */
+  transform: translate(-2px, -2px);
+}
+
+/* Book Cards */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    /* border: solid 1px white; */
+    width: 100vw;
+  }
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  color: #1C1D1D;
+  border: solid 1px #1C1D1D;
+  border-radius: 10px;
+  height: auto;
+  width: 28vw;
+  padding: 2rem;
+
+
+  box-shadow: 4px 4px 0 0 black; /* Initial shadow values */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Add transitions */
+  transform: translate(0, 0); /* Initial transform */
+
+}
+
+.book-card:hover {
+  box-shadow: 8px 8px 0 0 black; /* Enlarge the shadow */
+  transform: translate(-2px, -2px);
+}
+
+.book-card h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.book-card h5 {
+  font-weight: 800;
+}
+
+.book-card p {
+  padding-bottom: 0.5rem;
+}
+
+.book-card img {
+  height: 250px;
+  width: 150px;
+  align-self: center;
+  margin-top: 1rem;
+}
+
+
+/* About Us */
+.about-us-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.about-us-card {
+  width: 90vw;
+  height: 75vh;
+  border: solid 1px black;
+  box-shadow: 8px 8px 0 0 black; /* Enlarge the shadow */
+  border-radius: 10px;
+  margin-top: 8rem;
+  background-color: #EEEEEE;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: space-around;
+}
+
+.about-us-card-left {
+  width: 65%;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us-card-right {
+  display: flex;
+  align-items: center;
+}
+
+.about-us-card-left h1{
+  font-weight: 600;
+  font-size: 4rem;
+  color: black;
+  padding-bottom: 8rem;
+}
+
+.about-us-card-left p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: black;
+  line-height: 1.3;
+}
+
+.about-us-card-right img {
+  height: 500px;
+  width: 380px;
+  border-radius: 10px;
+  padding-right: 1rem;
+}
+
+.squares img {
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: #EEEEEE;
+  margin-top: 2rem;
+  margin-right: 0.5rem;
+}
+
+/* Contact */
+.contact-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.contact-card {
+  width: 90vw;
+  height: 75vh;
+  border: solid 1px black;
+  box-shadow: 8px 8px 0 0 black; /* Enlarge the shadow */
+  border-radius: 10px;
+  margin-top: 8rem;
+  background-color: #EEEEEE;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.contact-card h1 {
+  font-weight: 600;
+  font-size: 4rem;
+  color: black;
+  padding: 2rem 0 0 4rem;
+}
+
+.contact-card h2{
+  font-weight: 500;
+  font-size: 2.3rem;
+  color: black;
+  padding: 2rem 0 0 4rem;
+}
+
+.contact-card h3 {
+  font-size: 4rem;
+  font-weight: 700;
+  padding-top: 4rem;
+  text-align: center;
+  color: black;
+  margin-bottom: 4rem;
+}
+
+.contact-card h3:hover {
+  transition-duration: 0.5s;
+  color: #949393;
+}
+
+.images {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.images img {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 0 black;
+
+}
+
+.images img:hover {
+  box-shadow: 5px 5px 0 0 black; /* Enlarge the shadow */
+  transform: translate(-2px, -2px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Add transitions */
+}

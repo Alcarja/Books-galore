@@ -5,7 +5,9 @@ const Nav = () => {
     <>
       <nav>
         <div className="nav-container">
-          <h1>Books Galore</h1>
+          <Link to="/">
+            <h1>Books Galore</h1>
+          </Link>
           <ul>
             <li>
               <Link to="/"> Home </Link>

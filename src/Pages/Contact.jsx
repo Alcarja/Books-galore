@@ -14,13 +14,13 @@ const Contact = () => {
           </Link>
           <div className="images">
             <Link to="https://github.com/Alcarja" target="_blank">
-              <img src="./public/Images/github-logo.png" />
+              <img src="Images/github-logo.png" />
             </Link>
             <Link
               to="https://www.linkedin.com/in/jaime-alcaraz-castillo/"
               target="_blank"
             >
-              <img src="./public/Images/linkedin.png" />
+              <img src="Images/linkedin.png" />
             </Link>
           </div>
         </div>
